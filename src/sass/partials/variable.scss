@@ -1,18 +1,20 @@
-$primary-color: #512da8;
-$primary-bg: #fff;
-$font-color: #333;
+$primary-color: var(--bs-primary, #512da8);
+$primary-bg: var(--bs-body-bg, #fff);
+$font-color: var(--bs-body-color, #333);
 $font-color-light: #666;
-$error-color: #b00020;
-$border-color: #ddd;
+$error-color: var(--bs-danger, #b00020);
+$border-color: var(--bs-border-color, #ddd);
 $focus-color: #ccc;
 $selected-color: #eee;
-$arrow-color: #111;
+$arrow-color: #000;
 $checkbox-color: #888;
 $icon-hover-color: #333;
 $overlay-bg: rgba(0, 0, 0, 0.5);
+$focus-ring-color: var(--bs-focus-ring-color);
+$focus-border-color: #86b7fe;
 
-$font-family: sans-serif;
-$font-size: 14px;
+$font-family: var(--bs-font-sans-serif, sans-serif);
+$font-size: var(--bs-body-font-size, 14px);
 $font-size-small: 13px;
 $dropbox-height: 250px;
 $search-height: 40px;
@@ -29,6 +31,9 @@ $dropbox-close-button-width: 40px;
 $dropbox-close-button-offset: 8px;
 $options-loader-size: 40px;
 $option-checkbox-margin: 10px;
+$border-radius: var(--bs-border-radius, 0);
+$border-width: var(--bs-border-width, 1px);
+$min-height: 38px;
 
 $z-index: 1;
 

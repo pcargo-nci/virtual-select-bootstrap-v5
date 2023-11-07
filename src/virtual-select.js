@@ -36,6 +36,7 @@ const dataProps = [
   'dropboxWrapper',
   'emptyValue',
   'enableSecureText',
+  'focusOnClose',
   'focusSelectedOptionOnOpen',
   'hasOptionDescription',
   'hideClearButton',
@@ -783,6 +784,7 @@ export class VirtualSelect {
     this.required = convertToBoolean(options.required);
     this.autofocus = convertToBoolean(options.autofocus);
     this.useGroupValue = convertToBoolean(options.useGroupValue);
+    this.focusOnClose = convertToBoolean(options.focusOnClose);
     this.focusSelectedOptionOnOpen = convertToBoolean(options.focusSelectedOptionOnOpen);
     this.noOptionsText = options.noOptionsText;
     this.noSearchResultsText = options.noSearchResultsText;
@@ -2132,7 +2134,7 @@ export class VirtualSelect {
       position: this.position,
       zIndex: this.zIndex,
       margin: 4,
-      transitionDistance: 30,
+      transitionDistance: 10,
       hideArrowIcon: true,
       disableManualAction: true,
       disableUpdatePosition: !this.hasDropboxWrapper,
@@ -2225,7 +2227,9 @@ export class VirtualSelect {
 
     if (!isSilent) {
       DomUtils.dispatchEvent(this.$ele, 'afterClose');
-      this.focus();
+      if (this.focusOnClose) {
+        this.focus();
+      }
     }
   }
 
