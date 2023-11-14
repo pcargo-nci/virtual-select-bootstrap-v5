@@ -574,6 +574,14 @@
     }
   }
 
+  &.focused.has-error,
+  &:focus.has-error {
+    .vscomp-toggle-button {
+      box-shadow: 0 0 0 0.25rem rgba($error-rgb, 0.25);
+      outline: 0;
+    }
+  }
+
   &.show-value-as-tags {
     .vscomp-toggle-button {
       padding: 4px 22px 0 10px;

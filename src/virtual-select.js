@@ -2135,6 +2135,7 @@ export class VirtualSelect {
       zIndex: this.zIndex,
       margin: 4,
       transitionDistance: 10,
+      hideDuration: 0,
       hideArrowIcon: true,
       disableManualAction: true,
       disableUpdatePosition: !this.hasDropboxWrapper,
